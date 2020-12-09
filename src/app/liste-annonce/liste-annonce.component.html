@@ -1,0 +1,30 @@
+
+<div class="container mx-auto">
+ <!-- <button type="submit" (click)="afficher()">show</button>-->
+
+  <app-ajouter-annonce [art]="artic" (updateArticle)="updateAjour($event)" (eventSaveArticle)="save($event)"></app-ajouter-annonce >
+    <br>
+    <h1 class="text-center">*----------Liste Des Piéce----------*</h1>
+    <br><br><br><br>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="form-group">
+        <label><b style="color: red;">Votre budget:</b></label>
+     <input name="priceMax" type="number" [(ngModel)]="priceMax" class="form-control">
+    </div>
+  </div>
+
+
+  </div>
+
+  <div class="row">
+
+
+    <br>
+  <app-annonce *ngFor="let i of listarticle" [ar]="i" [prixInput]="priceMax" (a)="like($event)" (aa)="dislike($event)" (aaa)="Supprimer($event)" (aaaa)="favoris($event)" (aaaaa)="achat($event)" (aaaaaa)="update($event)">
+
+  </app-annonce>
+  </div>
+</div>
+
+

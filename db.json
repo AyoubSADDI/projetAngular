@@ -1,0 +1,62 @@
+{
+  "articles": [
+    {
+      "id": 44,
+      "piece": "aaa",
+      "marque": "mmmm",
+      "etat": "dgtd",
+      "description": "dgdsgds",
+      "prix": "11",
+      "dislike": 0,
+      "like": 0,
+      "achat": false,
+      "favoris": false,
+      "image": "tail.jpg"
+    },
+    {
+      "id": 4,
+      "piece": "aaa",
+      "marque": "Marcadezz",
+      "etat": "cvv",
+      "description": "Le carburateur est un organane mécanique assurant le mélange entre l’aair et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant.",
+      "prix": "44",
+      "dislike": 0,
+      "like": 0,
+      "achat": false,
+      "favoris": false,
+      "image": "logo.jpg"
+    }
+  ],
+  "contact": [
+    {
+      "objectif": "aaaaaaaaaaaaaa",
+      "information": {
+        "nom": "aaa",
+        "prenom": "aaa",
+        "cin": "00000000",
+        "email": "ayou.s@gmil.com"
+      },
+      "id": 1
+    },
+    {
+      "objectif": "mamamammamma",
+      "information": {
+        "nom": "aaaa",
+        "prenom": "aaaa",
+        "cin": "00000000",
+        "email": "a.a@gmail.com"
+      },
+      "id": 2
+    },
+    {
+      "objectif": "mamamammamma",
+      "information": {
+        "nom": "aaaa",
+        "prenom": "aaaa",
+        "cin": "00000000",
+        "email": "a.a@gmail.com"
+      },
+      "id": 3
+    }
+  ]
+}

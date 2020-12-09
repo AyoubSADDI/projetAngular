@@ -1,0 +1,82 @@
+<br>
+  <h1 class="text-center">*----------Contacter----------*</h1>
+<form [formGroup]=registerForm (ngSubmit)="onSubmit()">
+
+  <br><br><br>
+
+  <div class="container">
+  <div class="form-group">
+<label>Objectif:</label>
+<input type="text" formControlName="objectif" class="form-control col-md-12" >
+</div>
+<div class="alert alert-danger" *ngIf="registerForm.controls['objectif'].errors && registerForm.controls['objectif'].touched">
+  <div *ngIf="registerForm.controls['objectif'].hasError('required')">
+     Votre objectif est obligatoir
+    </div>
+    <div *ngIf="registerForm.controls['objectif'].hasError('minlength')">
+      au minimum 10 caractéres
+     </div>
+</div>
+
+<h3 style="color: red;" class="text-center">*--Vos Informations--*</h3>
+<div formGroupName="information">
+<div class="form-group">
+  <label>Nom:</label>
+  <input type="text" formControlName="nom" class="form-control">
+  </div>
+  <div class="alert alert-danger" *ngIf="registerForm.get('information').get('nom').errors && registerForm.get('information').get('nom').touched">
+    <div *ngIf="registerForm.get('information').get('nom').hasError('required')">
+      Votre nom est obligatoir
+     </div>
+     <div *ngIf="registerForm.get('information').get('nom').hasError('minlength')">
+       au minimum 2 caractéres
+      </div>
+  </div>
+  <div class="form-group">
+    <label>Prenom:</label>
+    <input type="text" formControlName="prenom" class="form-control">
+    </div>
+    <div class="alert alert-danger" *ngIf="registerForm.get('information').get('prenom').errors && registerForm.get('information').get('prenom').touched">
+      <div *ngIf="registerForm.get('information').get('prenom').hasError('required')">
+        Votre prenom est obligatoir
+       </div>
+       <div *ngIf="registerForm.get('information').get('prenom').hasError('minlength')">
+         au minimum 2 caractéres
+        </div>
+    </div>
+    <div class="form-group">
+      <label>Cin:</label>
+      <input type="text" formControlName="cin" class="form-control">
+      </div>
+      <div class="alert alert-danger" *ngIf="registerForm.get('information').get('cin').errors && registerForm.get('information').get('cin').touched">
+        <div *ngIf="registerForm.get('information').get('cin').hasError('required')">
+          Votre cin est obligatoir
+         </div>
+         <div *ngIf="registerForm.get('information').get('cin').hasError('minlength')">
+           au minimum 8 caractéres
+          </div>
+          <div *ngIf="registerForm.get('information').get('cin').hasError('maxlength')">
+            au maximum 8 caractéres
+           </div>
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" formControlName="email" class="form-control" >
+        </div>
+        <div class="alert alert-danger" *ngIf="registerForm.get('information').get('email').errors && registerForm.get('information').get('email').touched">
+          <div *ngIf="registerForm.get('information').get('email').hasError('required')">
+            Votre email est obligatoir
+           </div>
+           <div *ngIf="registerForm.get('information').get('email').hasError('pattern')">
+             erreur de pattern
+            </div>
+        </div>
+  </div>
+
+<button type="submit"  class="btn btn-success" (click)=envoyer()>Envoyer</button>
+<button type="reset"  class="btn btn-warning" (click)="reset()">Cancel</button>
+</div>
+
+</form>
+
+
