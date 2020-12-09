@@ -16,6 +16,7 @@ import { AchatComponent } from './achat/achat.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { PageClientComponent } from './page-client/page-client.component';
+import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PageClientComponent } from './page-client/page-client.component';
     FavorisComponent,
     AchatComponent,
     AccueilComponent,
-    PageClientComponent
+    PageClientComponent,
+    WeatherWidgetComponent
   ],
   imports: [
     BrowserModule,
