@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Article } from '../model/article';
 import { ArticleService } from '../services/article.service';
-import { ServiceAgenceService } from '../services/service-agence.service';
 
 @Component({
   selector: 'app-liste-annonce',
@@ -14,9 +13,10 @@ export class ListeAnnonceComponent implements OnInit {
   artic:Article;
   priceMax:number;
   var:boolean;
+  test:boolean;
   //@Output() aa=new EventEmitter<Article>();
 
-  constructor(private service :ServiceAgenceService ,private serviceHttp:ArticleService) { }
+  constructor(private serviceHttp:ArticleService) { }
 
   ngOnInit(): void {
     this.serviceHttp.getArtcle().subscribe((data: Article[])=>{this.listarticle =data;
@@ -82,7 +82,8 @@ achat(article:Article){
 }
 update(a:Article){
 this.artic=a;
-console.log(this.artic);
+this.test=true;
+
 
 }
 afficher (){
@@ -94,6 +95,9 @@ this.listarticle.filter(x=>x.id==a.id)[0].description=a.description;
 this.listarticle.filter(x=>x.id==a.id)[0].etat=a.etat;
 this.listarticle.filter(x=>x.id==a.id)[0].marque=a.marque;
 this.listarticle.filter(x=>x.id==a.id)[0].piece=a.piece;
+this.listarticle.filter(x=>x.id==a.id)[0].image=a.image;
+
+
 console.log("aaaaaa");
 }
 }

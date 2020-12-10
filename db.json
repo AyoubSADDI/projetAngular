@@ -1,43 +1,43 @@
 {
   "articles": [
     {
-      "id": 44,
-      "piece": "aaa",
-      "marque": "mmmm",
-      "etat": "dgtd",
-      "description": "dgdsgds",
-      "prix": "11",
-      "dislike": 0,
+      "id": 1,
+      "piece": "aaaAg",
+      "marque": "Marcadezza",
+      "description": "dgdsgdsSc",
+      "etat": "dgtdD",
+      "prix": "2666",
       "like": 0,
-      "achat": false,
+      "dislike": 0,
+      "achat": true,
       "favoris": false,
       "image": "tail.jpg"
     },
     {
       "id": 4,
-      "piece": "aaa",
-      "marque": "Marcadezz",
-      "etat": "cvv",
-      "description": "Le carburateur est un organane mécanique assurant le mélange entre l’aair et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant.",
-      "prix": "44",
+      "piece": "aaaAg",
+      "marque": "Marcadezaa",
+      "etat": "sd",
+      "description": "sd",
+      "prix": "55550",
+      "like": 1,
       "dislike": 0,
-      "like": 0,
       "achat": false,
-      "favoris": false,
-      "image": "logo.jpg"
+      "favoris": true,
+      "image": "a.jpg"
     },
     {
-      "id": 47,
-      "piece": "aaaa",
-      "marque": "mmmmm",
-      "etat": "Moyenne étatt",
-      "description": "Le carburatteur est un organne mécanique assurant le mélange entre l’air et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant.",
-      "prix": "11",
-      "dislike": 0,
+      "id": 23,
+      "piece": "aaa",
+      "marque": "mmmm",
+      "etat": "Moyenne état",
+      "description": "Le carburateur estk un organane mécanique assurant le mélange entre l’aair et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant.",
+      "prix": "012",
+      "dislike": 1,
       "like": 0,
       "achat": false,
       "favoris": false,
-      "image": "a.jpg"
+      "image": "tail.jpg"
     }
   ],
   "contact": [
@@ -70,6 +70,16 @@
         "email": "a.a@gmail.com"
       },
       "id": 3
+    },
+    {
+      "objectif": "aaaaaaaaaaaaaaaaa",
+      "information": {
+        "nom": "aaa",
+        "prenom": "aa",
+        "cin": "00000000",
+        "email": "a.aa@gmail.com"
+      },
+      "id": 4
     }
   ]
 }

@@ -13,8 +13,9 @@ import { ReservationComponent } from './reservation/reservation.component';
 
 
 const ROUTES : Routes = [
-  {path: '',redirectTo:'/ajouter', pathMatch:'full'},
+  {path: '',redirectTo:'/Accueil', pathMatch:'full'},
   {path:'contact',component: ContactComponent},
+  {path:'acc',component: ListeAnnonceComponent},
   {path:'Accueil',component: AccueilComponent},
   {path:'ajouter',component: ListeAnnonceComponent},
   {path:'favoris',component: FavorisComponent},

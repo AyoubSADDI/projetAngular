@@ -2,21 +2,28 @@
 <div class="container mx-auto">
  <!-- <button type="submit" (click)="afficher()">show</button>-->
 
-  <app-ajouter-annonce [art]="artic" (updateArticle)="updateAjour($event)" (eventSaveArticle)="save($event)"></app-ajouter-annonce >
+  <app-ajouter-annonce [art]="artic" [teste]="test" (updateArticle)="updateAjour($event)" (eventSaveArticle)="save($event)"></app-ajouter-annonce >
     <br>
-    <h1 class="text-center">*----------Liste Des Piéce----------*</h1>
+    <h1 class="text-center">*----------RechercheMulticritaire----------*</h1>
     <br><br><br><br>
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-5">
       <div class="form-group">
+        <div>
         <label><b style="color: red;">Votre budget:</b></label>
      <input name="priceMax" type="number" [(ngModel)]="priceMax" class="form-control">
+     <label><b style="color: red;">VotrePiéce:</b></label>
+     <input name="priceMax" type="text" [(ngModel)]="priceMax" class="form-control">
+     <label><b style="color: red;">VotreMarque:</b></label>
+     <input name="priceMax" type="text" [(ngModel)]="priceMax" class="form-control">
     </div>
-  </div>
+  </div></div>
 
 
   </div>
-
+  <br><br><br><br>
+  <h1 class="text-center">*----------Liste Des Piéce----------*</h1>
+  <br><br><br><br>
   <div class="row">
 
 

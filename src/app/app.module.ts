@@ -15,8 +15,9 @@ import { FavorisComponent } from './favoris/favoris.component';
 import { AchatComponent } from './achat/achat.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
-import { PageClientComponent } from './page-client/page-client.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
+import { ListearticleFilsComponent } from './listearticle-fils/listearticle-fils.component';
+import { ListearticleParentComponent } from './listearticle-parent/listearticle-parent.component';
 
 
 @NgModule({
@@ -31,8 +32,12 @@ import { WeatherWidgetComponent } from './weather-widget/weather-widget.componen
     FavorisComponent,
     AchatComponent,
     AccueilComponent,
-    PageClientComponent,
-    WeatherWidgetComponent
+
+    WeatherWidgetComponent,
+
+    ListearticleFilsComponent,
+
+    ListearticleParentComponent
   ],
   imports: [
     BrowserModule,

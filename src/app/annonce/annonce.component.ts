@@ -18,6 +18,7 @@ export class AnnonceComponent implements OnInit {
  @Output() aaaa=new EventEmitter<Article>();
  @Output() aaaaa=new EventEmitter<Article>();
  @Output() aaaaaa=new EventEmitter<Article>();
+
   constructor(private service:ServiceAgenceService,private serviceHttp:ArticleService) { }
 
   ngOnInit(): void {
@@ -46,5 +47,6 @@ export class AnnonceComponent implements OnInit {
  }
  update(){
   this.aaaaaa.emit(this.ar);
+
  }
 }

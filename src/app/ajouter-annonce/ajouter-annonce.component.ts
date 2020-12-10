@@ -15,7 +15,11 @@ export class AjouterAnnonceComponent implements OnInit,OnChanges {
 ar:Article;
 listarticle:Article[];
 selectedFile=null;
+@Input() teste:boolean;
 @Output() updateArticle = new EventEmitter<Article>();
+alert:boolean=false;
+alertAjout:boolean=false;
+alertUpdate:boolean=false;
 
 
 
@@ -42,7 +46,8 @@ this.ar.favoris=false;
 this.onUpload();
 
    this.eventSaveArticle.emit(this.ar);
-
+this.alert=true;
+this.alertAjout=true;
    console.log(this.ar);
 
   }
@@ -52,9 +57,12 @@ this.onUpload();
     artic.dislike=this.art.dislike;
     artic.achat=this.art.achat;
     artic.favoris=this.art.favoris;
+    artic.image=this.art.image;
     console.log(artic);
     this.serviceHttp.updateArticle1(artic.id,artic).subscribe((art)=>artic=art );
     this.updateArticle.emit(artic);
+    this.alert=true;
+this.alertUpdate=true;
   }
   onFileSelected(event){
     console.log(event);
@@ -69,5 +77,9 @@ this.onUpload();
     this.serviceHttp.uploadImage(this.selectedFile.name);
 
 
+  }
+  onSubmit(){
+
+    alert('success\n\n' + JSON.stringify(this.ar,null,4));
   }
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageClientComponent } from './page-client.component';
+import { ListearticleParentComponent } from './listearticle-parent.component';
 
-describe('PageClientComponent', () => {
-  let component: PageClientComponent;
-  let fixture: ComponentFixture<PageClientComponent>;
+describe('ListearticleParentComponent', () => {
+  let component: ListearticleParentComponent;
+  let fixture: ComponentFixture<ListearticleParentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageClientComponent ]
+      declarations: [ ListearticleParentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageClientComponent);
+    fixture = TestBed.createComponent(ListearticleParentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
