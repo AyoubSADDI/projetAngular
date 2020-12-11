@@ -6,21 +6,34 @@
     <br>
     <h1 class="text-center">*----------RechercheMulticritaire----------*</h1>
     <br><br><br><br>
+    <form #f="ngForm">
   <div class="row">
     <div class="col-md-5">
       <div class="form-group">
-        <div>
+      <div>
         <label><b style="color: red;">Votre budget:</b></label>
-     <input name="priceMax" type="number" [(ngModel)]="priceMax" class="form-control">
+     <input name="priceMax" type="number" [(ngModel)]="budget" class="form-control" required #i="ngModel">
+     <div class="alert alert-danger" *ngIf="i.invalid && i.touched">
+      Budget est obligatoir
+     </div>
      <label><b style="color: red;">VotrePiéce:</b></label>
-     <input name="priceMax" type="text" [(ngModel)]="priceMax" class="form-control">
+     <input name="priceMax" type="text" [(ngModel)]="piece" class="form-control"  required #c="ngModel">
+     <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
+      Piéce est obligatoir
+     </div>
      <label><b style="color: red;">VotreMarque:</b></label>
-     <input name="priceMax" type="text" [(ngModel)]="priceMax" class="form-control">
+     <input name="priceMax" type="text" [(ngModel)]="marque" class="form-control"  required #k="ngModel">
+     <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
+      Marque est obligatoir
+     </div>
+     <button (click)="search()" class="btn btn-success" [disabled]="f.invalid">Recherche</button>
     </div>
+
   </div></div>
 
 
   </div>
+</form>
   <br><br><br><br>
   <h1 class="text-center">*----------Liste Des Piéce----------*</h1>
   <br><br><br><br>
@@ -28,10 +41,11 @@
 
 
     <br>
-  <app-annonce *ngFor="let i of listarticle" [ar]="i" [prixInput]="priceMax" (a)="like($event)" (aa)="dislike($event)" (aaa)="Supprimer($event)" (aaaa)="favoris($event)" (aaaaa)="achat($event)" (aaaaaa)="update($event)">
+  <app-annonce *ngFor="let i of listarticle" [ar]="i"  (a)="like($event)" (aa)="dislike($event)" (aaa)="Supprimer($event)" (aaaa)="favoris($event)" (aaaaa)="achat($event)" (aaaaaa)="update($event)">
 
   </app-annonce>
   </div>
 </div>
+
 
 

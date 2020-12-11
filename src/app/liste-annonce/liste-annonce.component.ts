@@ -11,9 +11,12 @@ export class ListeAnnonceComponent implements OnInit {
   listarticle:Article[];
   art:Article;
   artic:Article;
-  priceMax:number;
   var:boolean;
   test:boolean;
+  budget:number;
+  piece:string;
+  marque:string;
+
   //@Output() aa=new EventEmitter<Article>();
 
   constructor(private serviceHttp:ArticleService) { }
@@ -99,5 +102,8 @@ this.listarticle.filter(x=>x.id==a.id)[0].image=a.image;
 
 
 console.log("aaaaaa");
+}
+search(){
+this.listarticle=this.listarticle.filter(x=>x.prix==this.budget||x.piece==this.piece||x.marque==this.marque);
 }
 }

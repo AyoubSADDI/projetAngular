@@ -58,11 +58,11 @@ this.alertAjout=true;
     artic.achat=this.art.achat;
     artic.favoris=this.art.favoris;
     artic.image=this.art.image;
-    console.log(artic);
+
     this.serviceHttp.updateArticle1(artic.id,artic).subscribe((art)=>artic=art );
     this.updateArticle.emit(artic);
     this.alert=true;
-this.alertUpdate=true;
+    this.alertUpdate=true;
   }
   onFileSelected(event){
     console.log(event);

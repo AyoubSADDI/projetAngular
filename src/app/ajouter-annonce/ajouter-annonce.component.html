@@ -22,7 +22,7 @@
           <input class="form-control col-md-12" name="id" type="number" value="{{ art? art.id: '' }}"   [(ngModel)]="ar.id" required #id="ngModel">
           </div>
           <div class="alert alert-danger" *ngIf="id.invalid && id.touched">
-           id is required
+           id est obligatoir
           </div>
 
 
@@ -31,8 +31,8 @@
         <input class="form-control" name="piece" type="text" value="{{ art? art.piece: '' }}"[(ngModel)]="ar.piece"  #t="ngModel" required minlength="3" pattern="^[a-zA-Z]+$">
         </div>
         <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
-          <div *ngIf="t.errors.required"> Title is required</div>
-          <div *ngIf="t.errors.minlength"> Min lenght is 3</div>
+          <div *ngIf="t.errors.required"> Piece est obligatoir</div>
+          <div *ngIf="t.errors.minlength"> Min caractère 3</div>
           <div *ngIf="t.errors.pattern"> Erreur de Patern</div>
         </div>
         <div>
@@ -41,20 +41,21 @@
         </div>
         <div class="alert alert-danger" *ngIf="q.invalid && q.touched">
           <div *ngIf="q.errors.required"> Quantity Invalid</div>
-          <div *ngIf="q.errors.minlength"> Min lenght is 3</div>
+          <div *ngIf="q.errors.minlength"> Min caractère 3</div>
         </div>
 
         <div>
           <div class="form-group">
             <label><b>Upload Image:</b></label>
-            <input type="file" (change)="onFileSelected($event)"  class="form-control" />
+            <input type="file" (change)="onFileSelected($event)"  class="form-control"/>
           </div>
+
         <label><b>Etat:</b></label>
         <input class="form-control" name="etat" type="text" value="{{ art? art.etat: '' }}" [(ngModel)]="ar.etat"  #p="ngModel" required>
         </div>
 
           <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
-         <div *ngIf="p.errors.required"> Title is required</div>
+         <div *ngIf="p.errors.required"> Etat obligatoir</div>
         </div>
 
         <div>
@@ -62,7 +63,7 @@
           <input class="form-control" name="desc" type="text" value="{{ art? art.description: '' }}" [(ngModel)]="ar.description"  #d="ngModel" required >
         </div>
         <div class="alert alert-danger" *ngIf="d.invalid && d.touched">
-          <div *ngIf="d.errors.required"> Title is required</div>
+          <div *ngIf="d.errors.required"> Description obligatoir</div>
          </div>
         <div>
         <label> <b>Prix:</b></label>

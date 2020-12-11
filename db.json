@@ -2,11 +2,11 @@
   "articles": [
     {
       "id": 1,
-      "piece": "aaaAg",
-      "marque": "Marcadezza",
-      "description": "dgdsgdsSc",
-      "etat": "dgtdD",
-      "prix": "2666",
+      "piece": "aaaAga",
+      "marque": "Marcadezzaa",
+      "etat": "dgtdDd",
+      "description": "dgdsgdsScd",
+      "prix": "26660",
       "like": 0,
       "dislike": 0,
       "achat": true,
