@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgModel, Validators } from '@angular/forms';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Contact } from '../model/contact';
 import { ServiceContactService } from '../services/service-contact.service';
 
@@ -13,8 +14,9 @@ export class ContactComponent implements OnInit {
   contact1:Contact;
   listContact:Contact[];
   registerForm : FormGroup;
+  closeResult: string;
 
-  constructor(private serviceHttp:ServiceContactService) { }
+  constructor(private serviceHttp:ServiceContactService,private modalService: NgbModal) { }
 
   ngOnInit(): void {
 
@@ -32,10 +34,10 @@ export class ContactComponent implements OnInit {
        });
 
   }
-  onSubmit(){
-    console.log(this.registerForm.value);
-    alert('success\n\n' + JSON.stringify(this.registerForm.value,null,4));
-  }
+ // onSubmit(){
+    //console.log(this.registerForm.value);
+  //  alert('success\n\n' + JSON.stringify(this.registerForm.value,null,4));
+  //}
  reset(){
     this.registerForm.reset()
   }
@@ -44,5 +46,21 @@ export class ContactComponent implements OnInit {
    this.serviceHttp.addContact(this.contact1).subscribe(()=>this.listContact =[this.contact1, ...this.listContact]);
    console.log("ayoub"+this.contact);
   console.log("ayoubsaddi"+this.listContact);
+  }
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }

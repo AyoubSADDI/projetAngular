@@ -1,5 +1,6 @@
 import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Article } from '../model/article';
 import { ArticleService } from '../services/article.service';
 
@@ -20,6 +21,8 @@ selectedFile=null;
 alert:boolean=false;
 alertAjout:boolean=false;
 alertUpdate:boolean=false;
+  modalService: any;
+  closeResult: string;
 
 
 
@@ -38,18 +41,14 @@ alertUpdate:boolean=false;
 
   }
   save(){
-
+this.onUpload();
 this.ar.dislike=0;
 this.ar.like=0;
 this.ar.achat=false;
 this.ar.favoris=false;
-this.onUpload();
-
-   this.eventSaveArticle.emit(this.ar);
+this.eventSaveArticle.emit(this.ar);
 this.alert=true;
 this.alertAjout=true;
-   console.log(this.ar);
-
   }
 
   update(artic:Article){
@@ -78,8 +77,20 @@ this.alertAjout=true;
 
 
   }
-  onSubmit(){
-
-    alert('success\n\n' + JSON.stringify(this.ar,null,4));
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 }

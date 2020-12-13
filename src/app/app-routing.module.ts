@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DetailsArticleComponent } from './details-article/details-article.component';
 import { FavorisComponent } from './favoris/favoris.component';
 import { ListeAnnonceComponent } from './liste-annonce/liste-annonce.component';
+import { ListearticleParentComponent } from './listearticle-parent/listearticle-parent.component';
 import { ReservationComponent } from './reservation/reservation.component';
 
 
@@ -16,6 +17,7 @@ const ROUTES : Routes = [
   {path: '',redirectTo:'/Accueil', pathMatch:'full'},
   {path:'contact',component: ContactComponent},
   {path:'acc',component: ListeAnnonceComponent},
+  {path:'Admin',component: ListearticleParentComponent},
   {path:'Accueil',component: AccueilComponent},
   {path:'ajouter',component: ListeAnnonceComponent},
   {path:'favoris',component: FavorisComponent},

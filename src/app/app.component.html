@@ -9,7 +9,10 @@
         <a class="nav-link" routerLink="/Accueil">Accueil <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/ajouter">Espace Administrateur et Client <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/Admin">Espace Administrateur <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/ajouter">Espace Client <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" routerLink="/favoris">Favoris <span class="sr-only">(current)</span></a>
@@ -50,7 +53,7 @@
 
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Notre site qui vous permet d'acheter tout les piéce de votre voiture.</p>
+        <img src="../../assets/k.jpg" class="img-fluid" alt="Responsive image" width="200" height="200">        <p>Notre site qui vous permet d'acheter tout les piéces de votre voiture.</p>
 
       </div>
       <!-- Grid column -->
@@ -61,30 +64,12 @@
       <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
 
-        <ul class="list-unstyled">
-          <li>
-            <p>
-              <a href="#!">PROJECTS</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">ABOUT US</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">BLOG</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="#!">AWARDS</a>
-            </p>
-          </li>
-        </ul>
+        <h5 class="font-weight-bold text-uppercase mb-4">Weather</h5>
+        <br>
+        <div>
+        <app-weather-widget></app-weather-widget>
+      </div>
 
       </div>
       <!-- Grid column -->

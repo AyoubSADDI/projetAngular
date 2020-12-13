@@ -2,37 +2,39 @@
 <div class="container mx-auto">
  <!-- <button type="submit" (click)="afficher()">show</button>-->
 
-  <app-ajouter-annonce [art]="artic" [teste]="test" (updateArticle)="updateAjour($event)" (eventSaveArticle)="save($event)"></app-ajouter-annonce >
     <br>
-    <h1 class="text-center">*----------RechercheMulticritaire----------*</h1>
+   <!--<h1 class="text-center">*----------RechercheMulticritaire----------*</h1>-->
+   <img src="../../assets/a.jpg" width="1090" height="400">
     <br><br><br><br>
     <form #f="ngForm">
   <div class="row">
-    <div class="col-md-5">
+    <div class="offset-md-4 col-md-4">
       <div class="form-group">
-      <div>
-        <label><b style="color: red;">Votre budget:</b></label>
-     <input name="priceMax" type="number" [(ngModel)]="budget" class="form-control" required #i="ngModel">
+
+        <h6 class="text-center" ><b style="color: red;">Votre budget</b></h6>
+     <input name="p" type="number" [(ngModel)]="budget" class="form-control" required #i="ngModel">
      <div class="alert alert-danger" *ngIf="i.invalid && i.touched">
       Budget est obligatoir
      </div>
-     <label><b style="color: red;">VotrePiéce:</b></label>
-     <input name="priceMax" type="text" [(ngModel)]="piece" class="form-control"  required #c="ngModel">
+     <h6 class="text-center"><b style="color: red;">VotrePiéce</b></h6>
+     <input name="pp" type="text" [(ngModel)]="piece" class="form-control"  required #c="ngModel">
      <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
       Piéce est obligatoir
      </div>
-     <label><b style="color: red;">VotreMarque:</b></label>
-     <input name="priceMax" type="text" [(ngModel)]="marque" class="form-control"  required #k="ngModel">
-     <div class="alert alert-danger" *ngIf="c.invalid && c.touched">
+     <h6 class="text-center"><b style="color: red;">VotreMarque</b></h6>
+     <input name="ppp" type="text" [(ngModel)]="marque" class="form-control"  required #k="ngModel">
+     <div class="alert alert-danger" *ngIf="k.invalid && k.touched">
       Marque est obligatoir
      </div>
-     <button (click)="search()" class="btn btn-success" [disabled]="f.invalid">Recherche</button>
-    </div>
+     <div class="row">
+     <button (click)="search()" class="btn btn-success my-3 container" [disabled]="f.invalid">Recherche</button>
+     <button type="reset" class="btn btn-danger my-3 my-3 container">Annuler</button></div>
+
 
   </div></div>
 
-
   </div>
+
 </form>
   <br><br><br><br>
   <h1 class="text-center">*----------Liste Des Piéce----------*</h1>
@@ -41,7 +43,7 @@
 
 
     <br>
-  <app-annonce *ngFor="let i of listarticle" [ar]="i"  (a)="like($event)" (aa)="dislike($event)" (aaa)="Supprimer($event)" (aaaa)="favoris($event)" (aaaaa)="achat($event)" (aaaaaa)="update($event)">
+  <app-annonce *ngFor="let i of listarticle" [ar]="i"  (a)="like($event)" (aa)="dislike($event)"  (aaaa)="favoris($event)" (aaaaa)="achat($event)" >
 
   </app-annonce>
   </div>

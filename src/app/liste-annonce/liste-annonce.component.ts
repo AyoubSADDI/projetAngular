@@ -31,7 +31,8 @@ export class ListeAnnonceComponent implements OnInit {
   }
   save(a:Article){
 
-    this.serviceHttp.addArticle(a).subscribe(()=>this.listarticle =[a, ...this.listarticle]);
+    this.listarticle.push(a);
+    this.serviceHttp.addArticle(a).subscribe(()=>this.listarticle);
 
   }
   like (article:Article)

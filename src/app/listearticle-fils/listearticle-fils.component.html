@@ -1,1 +1,71 @@
-<p>listearticle-fils works!</p>
+<div>
+  <div class="card" style="width: 23rem;" class="col-md-12" *ngIf="ar.prix<prixInput || prixInput==null ">
+    <img src="../../assets/{{ar.image}}" height="200" width="100" class="card-img-top" alt="...">
+
+    <div class="card-body">
+      <h5 class="card-title"><label>Le piéce:</label>{{ar.piece}}</h5>
+      <p class="card-text"><label>La marque:</label>{{ar.marque}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item"><label>L'etat:</label>{{ar.etat}}</li>
+      <li class="list-group-item"> <label>La prix:</label>{{ar.prix}}</li>
+      <li class="list-group-item"><label>La reference:</label>{{ar.id}}</li>
+      <li class="list-group-item"><label>Like:</label>{{ar.like}}</li>
+      <li class="list-group-item"><label>Dislike:</label>{{ar.dislike}}</li>
+
+    </ul>
+    <div class="card-body">
+
+
+
+
+
+
+      <button type="submit" class="btn btn-primary"(click)="open1(content)"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+      </svg></button>
+       <button type="submit" class="btn btn-danger" (click)="open(content1)"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+      </svg></button>
+
+    </div>
+
+
+  </div>
+  <ng-template #content1 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Delete  </h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        Vous voulez supprimer ?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Non</button>
+        <button type="button" class="btn btn-outline-dark"
+        (click)="Supprimer();modal.close('Delete successfully')">Oui</button>
+
+    </div>
+</ng-template>
+<ng-template #content let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Update  </h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+      Vous voulez update?
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Non</button>
+      <button type="button" class="btn btn-outline-dark"
+      (click)="update();modal.close('Delete successfully')">Oui</button>
+
+  </div>
+</ng-template>
+  </div>

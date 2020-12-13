@@ -1,8 +1,8 @@
 <br>
-<h1 class="text-center">*----------Ajouter un Piéce----------*</h1>
-<br><br><br><br>
+<img src="../../assets/ad.jpg"  width="1100" height="350">
+<br><br><br>
 <div class="row">
-  <div class="col-md-10">
+  <div class="col-md-12 my-5">
    <!-- {{art | json}}-->
    <div *ngIf="alert==true" class="alert alert-success alert-dismissible fade show" role="alert">
      <div *ngIf="alertAjout==true">
@@ -18,9 +18,9 @@
 
         <div class="form-group">
 
-          <label><b>Id:</b></label>
+        <label><b>Reference:</b></label>
           <input class="form-control col-md-12" name="id" type="number" value="{{ art? art.id: '' }}"   [(ngModel)]="ar.id" required #id="ngModel">
-          </div>
+
           <div class="alert alert-danger" *ngIf="id.invalid && id.touched">
            id est obligatoir
           </div>
@@ -40,7 +40,7 @@
         <input class="form-control" name="marque" type="text" value="{{ art? art.marque: '' }}" [(ngModel)]="ar.marque"  #q="ngModel" required minlength="3" >
         </div>
         <div class="alert alert-danger" *ngIf="q.invalid && q.touched">
-          <div *ngIf="q.errors.required"> Quantity Invalid</div>
+          <div *ngIf="q.errors.required"> Marque Invalid</div>
           <div *ngIf="q.errors.minlength"> Min caractère 3</div>
         </div>
 
@@ -69,12 +69,14 @@
         <label> <b>Prix:</b></label>
         <input class="form-control" name="prix" type="" value="{{ art? art.prix: '' }}" [(ngModel)]="ar.prix"  #p="ngModel" required >
       </div>
-        <div class="alert alert-danger" *ngIf="p.value<0">
+        <div class="alert alert-danger" *ngIf="ar.prix<1">
+          Le prix est inferieure < 1
         </div>
-        <button type="submit" class="btn btn-success my-5 mx-2 " [disabled]="f.invalid || p.value<0 || teste==true" (click)="save()" >Ajouter</button>
-          <button type="submit" class="btn btn-danger my-5 mx-5"   [disabled]="teste!=true" (click)="update(ar)"  >Mise à jour</button>
-        <button type="reset" class="btn btn-danger" [disabled]="id.invalid">Annuler</button>
+        <button type="submit" class="btn btn-success my-5 mx-2 " [disabled]="f.invalid || ar.prix<1|| teste==true" (click)="save()" >Ajouter</button>
+          <button type="submit" class="btn btn-primary my-5 mx-5"   [hidden]="teste!=true" (click)="update(ar)"  >Mise à jour</button>
+        <button type="reset" class="btn btn-danger" [disabled]="t.invalid">Annuler</button>
       </div>
+    </div>
 </form>
 </div>
 </div>

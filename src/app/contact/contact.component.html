@@ -1,6 +1,6 @@
 <br>
-  <h1 class="text-center">*----------Contacter----------*</h1>
-<form [formGroup]=registerForm (ngSubmit)="onSubmit()">
+<img src="../../assets/cn.jpg"  width="1110" height="300">
+<form [formGroup]=registerForm ><!--(ngSubmit)="onSubmit()"-->
 
   <br><br><br>
 
@@ -73,8 +73,25 @@
         </div>
   </div>
 
-<button type="submit"  class="btn btn-success" (click)=envoyer()>Envoyer</button>
+<button type="submit" [disabled]="registerForm.invalid" class="btn btn-success" (click)="open(content)">Envoyer</button>
 <button type="reset"  class="btn btn-warning" (click)="reset()">Cancel</button>
+<ng-template #content let-modal>
+  <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Envoyer  </h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+      Vous voulez Envoyer?
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Non</button>
+      <button type="button" class="btn btn-outline-dark"
+      (click)="envoyer();modal.close('Delete successfully')">Oui</button>
+
+  </div>
+</ng-template>
 </div>
 
 </form>

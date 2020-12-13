@@ -1,1 +1,11 @@
-<p>listearticle-parent works!</p>
+<app-ajouter-annonce [art]="artic" [teste]="test" (updateArticle)="updateAjour($event)" (eventSaveArticle)="save($event)"></app-ajouter-annonce >
+
+<div class="row">
+
+
+
+    <br>
+  <app-listearticle-fils *ngFor="let i of listarticle" [ar]="i"   (aaa)="Supprimer($event)"  (aaaaaa)="update($event)">
+
+  </app-listearticle-fils>
+  </div>

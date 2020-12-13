@@ -2,42 +2,42 @@
   "articles": [
     {
       "id": 1,
-      "piece": "aaaAga",
-      "marque": "Marcadezzaa",
-      "etat": "dgtdDd",
-      "description": "dgdsgdsScd",
-      "prix": "26660",
+      "piece": "carburateurr",
+      "marque": "clio55",
+      "etat": "état neuff",
+      "description": "Le carburateur est un oorgane mécanique assurant le mélange entre l’air et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant",
+      "prix": "1255",
       "like": 0,
-      "dislike": 0,
-      "achat": true,
+      "dislike": 1,
+      "achat": false,
       "favoris": false,
-      "image": "tail.jpg"
+      "image": "Murena_2.2_Solex_34CIC_carburettor.jpg"
     },
     {
-      "id": 4,
-      "piece": "aaaAg",
-      "marque": "Marcadezaa",
-      "etat": "sd",
-      "description": "sd",
-      "prix": "55550",
-      "like": 1,
+      "id": 2,
+      "piece": "Filtre",
+      "description": "un filtre à air est un dispositif conçu pour séparer les particules solides ou liquides ou les contaminants gazeux d'un courant d’air traversant le dispositif1. Le filtre à air est généralement constitué d'une ou de plusieurs couches de matériau poreux, fibreux ou granulaire.",
+      "etat": "état neuf",
+      "marque": "Mercedes classe a",
+      "prix": "99",
       "dislike": 0,
+      "like": 1,
       "achat": false,
       "favoris": true,
-      "image": "a.jpg"
+      "image": "images.jpg"
     },
     {
-      "id": 23,
-      "piece": "aaa",
-      "marque": "mmmm",
-      "etat": "Moyenne état",
-      "description": "Le carburateur estk un organane mécanique assurant le mélange entre l’aair et le carburant dans de nombreux moteurs à allumage commandé (dits « à essence », par opposition aux moteurs Diesel) très majoritairement représentés par les moteurs à deux ou à quatre temps. Sa présence est quasi systématique sur les anciennes générations de ces moteurs, bien qu'il soit maintenant souvent remplacé par l'injection électronique dans les moteurs modernes, les moteurs à carburateur ayant de moins bons rendements et consommant davantage de carburant.",
-      "prix": "012",
-      "dislike": 1,
+      "id": 3,
+      "piece": "Pharee",
+      "marque": "bmw serie 44",
+      "etat": "Moyenne étatt",
+      "description": "Les phares d'automobiles sont des projecteurs flumière destinés à l'éclairage de la route empruntée par un véhicule la nuit. Ils sont un constituant de l'éclairage standard des automobiles. Ils servent aussi à rendre le véhicule plus facilement visible par les autres, notamment par temps de pluie. Il existe également des phares de jour destinés à accroître la visibilité diurne.",
+      "prix": "2555",
       "like": 0,
+      "dislike": 1,
       "achat": false,
       "favoris": false,
-      "image": "tail.jpg"
+      "image": "PHARES.jpg"
     }
   ],
   "contact": [
@@ -80,6 +80,46 @@
         "email": "a.aa@gmail.com"
       },
       "id": 4
+    },
+    {
+      "objectif": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "information": {
+        "nom": "aaaaaaaaaaaaaaa",
+        "prenom": "aaaaaaaaaaaaaa",
+        "cin": "00000000",
+        "email": "a.aa@gmail.com"
+      },
+      "id": 5
+    },
+    {
+      "objectif": "aaaaaaaabbbbbbbbbbbbbbbbbb",
+      "information": {
+        "nom": "bfbfbfb",
+        "prenom": "bfbfbfb",
+        "cin": "12345678",
+        "email": "a.aa@yahoo.com"
+      },
+      "id": 6
+    },
+    {
+      "objectif": "aaaaaaaaaaa",
+      "information": {
+        "nom": "aa",
+        "prenom": "aa",
+        "cin": "88888888",
+        "email": "ayoub.saddi@gmail.com"
+      },
+      "id": 7
+    },
+    {
+      "objectif": "hhhhhhhhhhh",
+      "information": {
+        "nom": "gh",
+        "prenom": "fgjg",
+        "cin": "88888888",
+        "email": "ayoub.saddi@gmail.com"
+      },
+      "id": 8
     }
   ]
 }

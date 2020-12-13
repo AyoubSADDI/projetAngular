@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Article } from '../model/article';
 import { ArticleService } from '../services/article.service';
 import { ServiceAgenceService } from '../services/service-agence.service';
@@ -11,7 +12,9 @@ import { ServiceAgenceService } from '../services/service-agence.service';
 export class FavorisComponent implements OnInit {
   listFavorisArticle: Article[]
 
-  constructor(private serviceHttp:ArticleService) { }
+  closeResult: string;
+
+  constructor(private serviceHttp:ArticleService , private modalService: NgbModal) { }
 
   ngOnInit(): void {
 
@@ -32,5 +35,27 @@ export class FavorisComponent implements OnInit {
     console.log(this.listFavorisArticle);
 
   }
-
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  open1(content1) {
+    this.modalService.open(content1, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
+  }
 }

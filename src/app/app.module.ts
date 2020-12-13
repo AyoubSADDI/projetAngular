@@ -18,6 +18,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 import { ListearticleFilsComponent } from './listearticle-fils/listearticle-fils.component';
 import { ListearticleParentComponent } from './listearticle-parent/listearticle-parent.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ListearticleParentComponent } from './listearticle-parent/listearticle-
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
