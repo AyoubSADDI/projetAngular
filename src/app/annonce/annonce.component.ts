@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Article } from '../model/article';
-import { ArticleService } from '../services/article.service';
-import { ServiceAgenceService } from '../services/service-agence.service';
+import { ArticleService } from '../shared/article.service';
+
 
 @Component({
   selector: 'app-annonce',
@@ -19,7 +19,7 @@ export class AnnonceComponent implements OnInit {
  @Output() aaaaa=new EventEmitter<Article>();
  @Output() aaaaaa=new EventEmitter<Article>();
 
-  constructor(private service:ServiceAgenceService,private serviceHttp:ArticleService) { }
+  constructor(private serviceHttp:ArticleService) { }
 
   ngOnInit(): void {
     this.serviceHttp.getArtcle().subscribe((data: Article[])=>this.listarticle =data);

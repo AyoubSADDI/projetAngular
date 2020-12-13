@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Article } from '../model/article';
-import { ArticleService } from '../services/article.service';
-import { ServiceAgenceService } from '../services/service-agence.service';
+import { ArticleService } from '../shared/article.service';
+
 
 @Component({
   selector: 'app-favoris',

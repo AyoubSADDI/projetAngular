@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgModel, Validators } from '@angular/forms';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Contact } from '../model/contact';
-import { ServiceContactService } from '../services/service-contact.service';
+import { ServiceContactService } from '../shared/service-contact.service';
 
 @Component({
   selector: 'app-contact',

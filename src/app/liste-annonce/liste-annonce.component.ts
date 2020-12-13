@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Article } from '../model/article';
-import { ArticleService } from '../services/article.service';
+import { ArticleService } from '../shared/article.service';
 
 @Component({
   selector: 'app-liste-annonce',

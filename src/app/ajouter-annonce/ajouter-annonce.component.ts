@@ -2,7 +2,7 @@ import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/rende
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Article } from '../model/article';
-import { ArticleService } from '../services/article.service';
+import { ArticleService } from '../shared/article.service';
 
 
 @Component({
